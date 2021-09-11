@@ -7,7 +7,7 @@
 <ion-content *ngIf="response">
   <h1> Senarai Data</h1>
 
-  <ion-card *ngFor="let post of response">
+  <ion-card *ngFor="let post of response" routerLink="/post-comment/{{ post.id }}">
     <ion-card-header>
       <ion-card-subtitle>{{ post.title }}</ion-card-subtitle>
       <ion-card-title>{{ post.body }}</ion-card-title>
