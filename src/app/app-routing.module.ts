@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'post-list',
     loadChildren: () => import('./post-list/post-list.module').then( m => m.PostListPageModule)
   },
+  {
+    path: 'post-comment/:id',
+    loadChildren: () => import('./post-comment/post-comment.module').then( m => m.PostCommentPageModule)
+  },
 ];
 
 @NgModule({

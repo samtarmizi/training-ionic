@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>post-comment</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="response">
+  <h1> Senarai Data</h1>
+
+  <ion-card *ngFor="let comment of response">
+    <ion-card-header>
+      <ion-card-subtitle>POST ID: {{ comment.postId }}- {{ comment.email }}</ion-card-subtitle>
+      <ion-card-title>{{ comment.name }}</ion-card-title>
+    </ion-card-header>
+
+  </ion-card>
+
+</ion-content>

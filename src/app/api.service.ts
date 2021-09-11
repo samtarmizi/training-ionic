@@ -45,4 +45,17 @@ export class ApiService {
       })
     });
   }
+
+  getPostComments(id: any){
+
+    let url = 'https://jsonplaceholder.typicode.com/posts/' + id + '/comments';
+
+    return new Promise((resolve, reject) => {
+      this.http.get(url).subscribe((response) => {
+        resolve(response);
+      }, error => {
+        reject(error);
+      })
+    });
+  }
 }
