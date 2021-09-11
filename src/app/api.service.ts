@@ -19,4 +19,18 @@ export class ApiService {
       })
     });
   }
+
+  getTodoList(){
+
+    let url = 'https://jsonplaceholder.typicode.com/todos';
+
+    return new Promise((resolve, reject) => {
+      this.http.get(url).subscribe((response) => {
+        resolve(response);
+      }, error => {
+        reject(error);
+      })
+    });
+
+  }
 }

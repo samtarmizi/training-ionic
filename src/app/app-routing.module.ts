@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'coordinate-list',
     loadChildren: () => import('./coordinate-list/coordinate-list.module').then( m => m.CoordinateListPageModule)
   },
+  {
+    path: 'todo-list',
+    loadChildren: () => import('./todo-list/todo-list.module').then( m => m.TodoListPageModule)
+  },
 ];
 
 @NgModule({
