@@ -31,6 +31,18 @@ export class ApiService {
         reject(error);
       })
     });
+  }
 
+  getPostList(){
+
+    let url = 'https://jsonplaceholder.typicode.com/posts';
+
+    return new Promise((resolve, reject) => {
+      this.http.get(url).subscribe((response) => {
+        resolve(response);
+      }, error => {
+        reject(error);
+      })
+    });
   }
 }

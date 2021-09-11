@@ -23,6 +23,10 @@ const routes: Routes = [
     path: 'todo-list',
     loadChildren: () => import('./todo-list/todo-list.module').then( m => m.TodoListPageModule)
   },
+  {
+    path: 'post-list',
+    loadChildren: () => import('./post-list/post-list.module').then( m => m.PostListPageModule)
+  },
 ];
 
 @NgModule({
