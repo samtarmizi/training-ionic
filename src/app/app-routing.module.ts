@@ -15,6 +15,10 @@ const routes: Routes = [
     path: 'profile',
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   },
+  {
+    path: 'coordinate-list',
+    loadChildren: () => import('./coordinate-list/coordinate-list.module').then( m => m.CoordinateListPageModule)
+  },
 ];
 
 @NgModule({

@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>coordinate-list</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="response">
+  <h1> Senarai Data</h1>
+
+  <ion-card *ngFor="let coordinate of response">
+    <ion-card-header>
+      <ion-card-subtitle>{{ coordinate.latitude }}, {{ coordinate.longitude }}</ion-card-subtitle>
+      <ion-card-title>{{ coordinate.name }}</ion-card-title>
+    </ion-card-header>
+
+  </ion-card>
+
+</ion-content>
