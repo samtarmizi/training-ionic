@@ -23,8 +23,6 @@ export class CoordinateFormPage implements OnInit {
   }
 
   submitForm(){
-    console.log('Button clicked');
-    console.log(this.request);
 
     this.api.storeCoordinate(this.request).then((data:any) => {
       console.log(data);
