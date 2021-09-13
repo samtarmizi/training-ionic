@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'post-comment/:id',
     loadChildren: () => import('./post-comment/post-comment.module').then( m => m.PostCommentPageModule)
   },
+  {
+    path: 'coordinate-form',
+    loadChildren: () => import('./coordinate-form/coordinate-form.module').then( m => m.CoordinateFormPageModule)
+  },
 ];
 
 @NgModule({
