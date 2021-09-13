@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { CoordinateListPageRoutingModule } from './coordinate-list-routing.module';
 
 import { CoordinateListPage } from './coordinate-list.page';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CoordinateListPageRoutingModule
+    CoordinateListPageRoutingModule,
+    Ng2SearchPipeModule
   ],
   declarations: [CoordinateListPage]
 })

@@ -11,6 +11,7 @@ export class CoordinateListPage implements OnInit {
   constructor(public api: ApiService) { }
 
   response:any;
+  searchTerm:any;
 
   ngOnInit() {
     this.list();

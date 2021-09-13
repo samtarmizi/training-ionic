@@ -7,7 +7,9 @@
 <ion-content *ngIf="response">
   <h1> Senarai Data</h1>
 
-  <ion-card *ngFor="let coordinate of response">
+  <ion-searchbar showCancelButton="focus" [(ngModel)]="searchTerm"></ion-searchbar>
+
+  <ion-card *ngFor="let coordinate of response | filter:searchTerm">
     <ion-card-header>
       <ion-card-subtitle>{{ coordinate.latitude }}, {{ coordinate.longitude }}</ion-card-subtitle>
       <ion-card-title>{{ coordinate.name }}</ion-card-title>
